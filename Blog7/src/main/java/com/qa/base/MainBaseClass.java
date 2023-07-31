@@ -13,7 +13,7 @@ package com.qa.base;
 	import org.openqa.selenium.firefox.FirefoxDriver;
 	import org.testng.annotations.BeforeSuite;
 
-	public class BaseClass {
+	public class MainBaseClass {
 		
 		public WebDriver driver;
 		public static Properties properties;
@@ -21,7 +21,7 @@ package com.qa.base;
 		{
 			driver=new ChromeDriver();
 		}
-	   public BaseClass()
+	   public MainBaseClass()
 	   {
 		  properties = new Properties(); 
 		  File file = new  File(System.getProperty("user.dir")+"/src/main/java/com/qa/config/config.properties");
@@ -63,11 +63,11 @@ package com.qa.base;
 			 driver.get(properties.getProperty("url"));
 			 driver.manage().window().maximize();
 			 Thread.sleep(2000);
-		     driver.findElement(By.xpath("//*[@id=\"navbarDropdown\"]/img")).click();
-		     driver.findElement(By.xpath("//a[@href='/signup']")).click();
+		     //driver.findElement(By.xpath("//*[@id=\"navbarDropdown\"]/img")).click();
+		    // driver.findElement(By.xpath("//a[@href='/signup']")).click();
 		  
 	   
 	   }
 	   
+	
 	}
-
