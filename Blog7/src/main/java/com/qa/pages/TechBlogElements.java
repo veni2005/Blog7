@@ -9,12 +9,10 @@ import org.openqa.selenium.WebDriver;
 	 WebDriver driver;
 	 	
 	 	
-		//private WebElement setSignup;
-	 	//private WebElement setlogin;
+		
 	    private WebElement name;
 	    private WebElement accounttype;
-	   // private WebElement email;
-	    //private WebElement password;
+	    private WebElement Newpost1;
 	    private WebElement submit;
 	    
 	    private WebElement email;
@@ -26,6 +24,7 @@ import org.openqa.selenium.WebDriver;
 	     private WebElement Image;
 	     private WebElement Category;
 	     private WebElement Post;
+	     private WebElement SubmitPost;
 	    
 	    public TechBlogElements(WebDriver driver)
 	    {
@@ -130,11 +129,59 @@ import org.openqa.selenium.WebDriver;
 	    submit=driver.findElement(By.id("but"));
 	    submit.click();
 	}
-/*public String getText()
-{
-	return null;
+
+	//Trainer login
 	
-}*/
-	}
+	 public void setTrainerEmail(String setEmail)
+     {
+    	 email=driver.findElement(By.id("user"));
+    	 email.sendKeys(setEmail);
+     }
+     
+     public void setTrainerPassword(String pass)
+     {
+    	 password=driver.findElement(By.id("pwd"));
+    	 password.sendKeys(pass);
+    	 
+     }
+     public void TrainerLoginClick()
+     {
+    	 Logina=driver.findElement(By.id("logbut"));
+    	 Logina.click();
+     }
+	
+	
+     //Trainer Create Post
+     
+/*public void SubmitPost1() throws InterruptedException
+     
+     {
+    	
+		WebElement SubmitPost=driver.findElement(By.xpath("//button[@class='btn text-center btn-primary']"));
+        JavascriptExecutor executor=(JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();",SubmitPost);
+    }*/
+     public void NewPost1() throws InterruptedException//check
+     {
+   	 Thread.sleep(2000);
+      Newpost=driver.findElement(By.xpath("//a[@href='/trainerpost']"));
+      Newpost.click();
+     }
+  
+
+public void SubmitPost1() {
+	
+	WebElement SubmitPost=driver.findElement(By.xpath("//button[@class='btn text-center btn-primary']"));
+    JavascriptExecutor executor=(JavascriptExecutor)driver;
+    executor.executeScript("arguments[0].click();",SubmitPost);
+}
+}
+
+
+ 
+     
+     
+     
+	
 
 

@@ -63,8 +63,7 @@ package com.qa.base;
 			 driver.get(properties.getProperty("url"));
 			 driver.manage().window().maximize();
 			 Thread.sleep(2000);
-		     //driver.findElement(By.xpath("//*[@id=\"navbarDropdown\"]/img")).click();
-		    // driver.findElement(By.xpath("//a[@href='/signup']")).click();
+		   
 		  
 	   
 	   }
