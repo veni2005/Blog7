@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 
 import com.qa.base.MainBaseClass;
 import com.qa.pages.TechBlogElements;
-//import com.qa.pages.AdminLogin;
 
 
 	public class AdminApproval extends MainBaseClass {
