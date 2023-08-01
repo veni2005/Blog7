@@ -177,7 +177,14 @@ public void SubmitPost1() {
 }
 }
 
+//Admin Login
+	
 
+/*public void setAdminemail()
+	{
+		 Adminemail=driver.findElement(By.id("user"));
+	      Adminemailid.sendKeys(setemail);
+	}*/
  
      
      
