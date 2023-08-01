@@ -1,6 +1,7 @@
 	package com.qa.pages;
 
-	import org.openqa.selenium.By;
+	import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 	import org.openqa.selenium.WebElement;
@@ -25,6 +26,10 @@ import org.openqa.selenium.WebDriver;
 	     private WebElement Category;
 	     private WebElement Post;
 	     private WebElement SubmitPost;
+	     private WebElement approve;
+	     private WebElement pending;
+	     private WebElement approvel;
+	     private WebElement send;
 	    
 	    public TechBlogElements(WebDriver driver)
 	    {
@@ -150,17 +155,7 @@ import org.openqa.selenium.WebDriver;
     	 Logina.click();
      }
 	
-	
-     //Trainer Create Post
-     
-/*public void SubmitPost1() throws InterruptedException
-     
-     {
-    	
-		WebElement SubmitPost=driver.findElement(By.xpath("//button[@class='btn text-center btn-primary']"));
-        JavascriptExecutor executor=(JavascriptExecutor)driver;
-        executor.executeScript("arguments[0].click();",SubmitPost);
-    }*/
+	     
      public void NewPost1() throws InterruptedException//check
      {
    	 Thread.sleep(2000);
@@ -175,17 +170,63 @@ public void SubmitPost1() {
     JavascriptExecutor executor=(JavascriptExecutor)driver;
     executor.executeScript("arguments[0].click();",SubmitPost);
 }
+
+//Admin Approval
+
+
+public void pendingClick()
+
+{
+pending=driver.findElement(By.xpath("//a[@href='/approval']"));
+pending.click();
+
 }
 
-//Admin Login
-	
+public void approvelClick() throws InterruptedException
 
-/*public void setAdminemail()
-	{
-		 Adminemail=driver.findElement(By.id("user"));
-	      Adminemailid.sendKeys(setemail);
-	}*/
- 
+{
+approvel=driver.findElement(By.xpath("//button[@class=\"btn btn-outline-primary mx-3 ng-star-inserted\" and text()=\"Approve\"]"));
+approvel.click();
+
+Thread.sleep(2000);
+Alert al = driver.switchTo().alert();
+
+al.accept();
+
+}
+
+
+public void setcomment(String setcomment)
+{
+password=driver.findElement(By.xpath("/html/body/app-root/app-comment/form/div/textarea"));
+password.sendKeys(setcomment);
+}
+
+public void sendClick() throws InterruptedException
+
+{
+send=driver.findElement(By.xpath("/html/body/app-root/app-comment/form/button"));
+JavascriptExecutor executor=(JavascriptExecutor)driver;
+executor.executeScript("arguments[0].click();", send);
+send.click();
+Thread.sleep(2000);
+Alert ale = driver.switchTo().alert();
+
+ale.accept();
+
+}
+
+
+public void approveClick() {
+	
+	approve=driver.findElement(By.xpath("//p[@id=\"nav\" and @class=\"dropdown-toggle\"]"));
+    approve.click();
+}
+
+
+}
+
+
      
      
      

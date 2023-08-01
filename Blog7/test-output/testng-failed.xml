@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ictkerala.scripts.AdminLogin">
+      <class name="com.ictkerala.scripts.AdminApproval">
         <methods>
-          <include name="validEmail"/>
+          <include name="verifyValidLogin"/>
           <include name="initialization"/>
           <include name="setlogin"/>
         </methods>
-      </class> <!-- com.ictkerala.scripts.AdminLogin -->
+      </class> <!-- com.ictkerala.scripts.AdminApproval -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
