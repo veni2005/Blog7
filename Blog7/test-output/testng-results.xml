@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-01T11:41:05 IST" name="Default suite" finished-at="2023-08-01T11:41:21 IST" duration-ms="15656">
+  <suite started-at="2023-08-01T18:16:51 IST" name="Default suite" finished-at="2023-08-01T18:16:52 IST" duration-ms="921">
     <groups>
     </groups>
-    <test started-at="2023-08-01T11:41:05 IST" name="Default test" finished-at="2023-08-01T11:41:21 IST" duration-ms="15656">
-      <class name="com.ictkerala.scripts.AdminApproval">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:com.ictkerala.scripts.AdminApproval@36ebc363]" started-at="2023-08-01T11:40:56 IST" name="initialization" finished-at="2023-08-01T11:41:05 IST" duration-ms="9300" status="PASS">
+    <test started-at="2023-08-01T18:16:51 IST" name="Default test" finished-at="2023-08-01T18:16:52 IST" duration-ms="921">
+      <class name="com.ictkerala.scripts.StudentLogin">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.ictkerala.scripts.StudentLogin@3c41ed1d]" started-at="2023-08-01T18:16:24 IST" name="initialization" finished-at="2023-08-01T18:16:51 IST" duration-ms="26521" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method is-config="true" signature="setlogin()[pri:0, instance:com.ictkerala.scripts.AdminApproval@36ebc363]" started-at="2023-08-01T11:41:05 IST" name="setlogin" finished-at="2023-08-01T11:41:05 IST" duration-ms="441" status="PASS">
+        <test-method is-config="true" signature="setlogin()[pri:0, instance:com.ictkerala.scripts.StudentLogin@3c41ed1d]" started-at="2023-08-01T18:16:51 IST" name="setlogin" finished-at="2023-08-01T18:16:51 IST" duration-ms="188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setlogin -->
-        <test-method signature="verifyValidLogin()[pri:0, instance:com.ictkerala.scripts.AdminApproval@36ebc363]" started-at="2023-08-01T11:41:05 IST" name="verifyValidLogin" finished-at="2023-08-01T11:41:20 IST" duration-ms="15144" status="PASS">
+        <test-method signature="verifyInValidLogin()[pri:0, instance:com.ictkerala.scripts.StudentLogin@3c41ed1d]" started-at="2023-08-01T18:16:51 IST" name="verifyInValidLogin" finished-at="2023-08-01T18:16:52 IST" duration-ms="710" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyValidLogin -->
-      </class> <!-- com.ictkerala.scripts.AdminApproval -->
+        </test-method> <!-- verifyInValidLogin -->
+      </class> <!-- com.ictkerala.scripts.StudentLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -30,7 +30,12 @@ import org.openqa.selenium.WebDriver;
 	     private WebElement pending;
 	     private WebElement approvel;
 	     private WebElement send;
-	    
+	     private WebElement Dropdown;
+	     private WebElement Edit;
+	     private WebElement Category1;
+	     private WebElement Home;
+	     private WebElement emailid;
+	     
 	    public TechBlogElements(WebDriver driver)
 	    {
 	        this.driver=driver;
@@ -223,6 +228,59 @@ public void approveClick() {
     approve.click();
 }
 
+
+public void DropdownClick()
+
+{
+Dropdown=driver.findElement(By.xpath("//a[@href=\"/categorywise\"]"));
+Dropdown.click();
+
+}
+
+public void  EditClick() throws InterruptedException
+
+{
+ Edit=driver.findElement(By.xpath("//button[@class=\"btn btn-outline-primary mx-3\"]"));
+ Edit.click();
+
+
+}
+//Edit Category
+
+public void CategoryClick() {
+	
+	{
+		Category1=driver.findElement(By.xpath("/html/body/app-root/app-admin/app-header/nav/div/div/ul/li[8]/a/p"));
+		Category1.click();
+		  
+		}
+}
+
+//Admin sort category
+
+
+public void HomeClick() {
+	
+	Home=driver.findElement(By.id("nav"));
+	   Home.click();
+}
+
+
+public void setpassword(String setpass)
+{
+	 password=driver.findElement(By.id("pwd"));
+	 password.sendKeys(setpass);
+	 
+}
+
+
+public void setemailid(String setemail) {
+	
+	{
+		 emailid=driver.findElement(By.id("user"));
+		 emailid.sendKeys(setemail);
+	}
+}
 
 }
 

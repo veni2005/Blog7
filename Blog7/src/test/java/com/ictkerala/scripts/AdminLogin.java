@@ -13,13 +13,7 @@ import com.qa.base.MainBaseClass;
 import com.qa.pages.TechBlogElements;
 
 
-	//import blog.ictk.utility.ExcelUtility;
 
-	//import java.io.IOException;
-	//import org.testng.Assert;
-
-	//import org.testng.annotations.Test;
-	
 	public class AdminLogin extends MainBaseClass {
 		TechBlogElements log;
 		
